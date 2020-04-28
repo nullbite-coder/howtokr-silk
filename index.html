@@ -50,9 +50,30 @@
 	<title>HOW TO KR - SILK</title>
 </head>
 
+<body data-bind="css: { 'iphone': isIPhone, 'right-side-up': isRightSideUp, 'silk-active': silkActive, 'mouse-over-previewable-controls': mouseOverControls, 'mouse-down-on-slider': mouseDownOnSlider }">
 
-	
+	<a class="email-me" href="mailto:yurivish@gmail.com">Send Feedback</a>
 
+	<a href="https://goo.gl/oIIuif" id="iphone-image-link"> </a>
+
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "../connect.facebook.net/en_GB/all.js#xfbml=1&appId=408271179236250";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+	<div id="canvii-container">
+
+		<div id="main-controls" class="controls-container">
+			<div class="row btn-row share-btn-row">
+				<div class="btn" id="btn-new" data-bind="click: clear, css: { visible: notPristine }">
+					<span class="text">New</span>
+				</div>
+
+				
 			<div class="row">
 				<div class="btn silk-icon" data-bind="click: toggleFullscreen, css: { visible: notPristine }">
 					<div class="contents"><i class="icon-fullscreen"></i></div>
@@ -122,6 +143,33 @@
 		</div>
 
 
+
+
+				<div class="btn silk-icon" data-bind="click: toggleMute, css: { visible: notPristine }">
+					<div class="contents"><i class="icon-volume-off" data-bind="visible: false"></i><i class="icon-volume-up" data-bind="visible: false"></i></div>
+					<div class="tt" data-bind="visible: muted">Muted</div>
+					<div class="tt" data-bind="visible: notMuted">Mute</div>
+				</div>
+
+				<!-- notPristineAndJustCleared -->
+				<div class="social" data-bind="css: { visible: notPristine }">
+					<div class="fb-like" data-href="https://www.facebook.com/pages/Silk/135022713223750?ref=ts&amp;fref=ts" data-send="false" data-layout="button_count" data-width="50" data-show-faces="true" data-colorscheme="dark" data-font="lucida grande"></div>
+
+					<a href="https://twitter.com/tweetsilk" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false"></a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="../platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				</div>
+			</div>
+			<div class="app-link-container row" data-bind="css: { visible: notPristine }">
+			</div>
+			<div class="row about-row" data-bind="css: { visible: showAbout }">
+				<p>Silk was made by Yuri Vishnevsky, with <a href="http://click.linksynergy.com/fs-bin/stat?id=1KYVs20MuZw&amp;offerid=146261&amp;type=3&amp;subid=0&amp;tmpid=1826&amp;RD_PARM1=https%253A%252F%252Fitunes.apple.com%252Fus%252Falbum%252Fthe-world-forgotten-single%252Fid579359664%253Fuo%253D4%2526partnerId%253D30">music</a> and sound crafted by <a href="http://microscopics.co.uk/">Mat Jarvis</a>.</p>
+
+				<p>Art shared with Silk is licensed under <a href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons</a>.</p>
+
+				<p>If you enjoyed Silk, please <a href="mailto:yurivish@gmail.com">let me know</a>!</p>
+
+			</div>
+		</div>
 
 		<canvas id="silk-1" class="silk-canvas active"></canvas>
 		<canvas id="silk-2" class="silk-canvas buffer"></canvas>
