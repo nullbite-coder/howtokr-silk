@@ -56,15 +56,20 @@
 			color: #fff;
 			text-decoration: underline;
 		}
+		.header {
+  padding: 5px;
+  text-align: center;
+  background: #000000;
+  color: white;
+  font-size: 10px;
+}
 	</style>
 	<title>HOW TO KR - SILK</title>
 </head>
 
 <body data-bind="css: { 'iphone': isIPhone, 'right-side-up': isRightSideUp, 'silk-active': silkActive, 'mouse-over-previewable-controls': mouseOverControls, 'mouse-down-on-slider': mouseDownOnSlider }">
-	<div class="dg ac">
     	<div class="header">
   		<h1>This Website code is made by <a href = "https://www.howtokr.com"> HowtoKR.com</a></h1>
-  		<h2>CLick to Add Gravity Points with Masses</h2>
 		</div>
 
 	<div id="fb-root"></div>
@@ -172,14 +177,7 @@
 			</div>
 			<div class="app-link-container row" data-bind="css: { visible: notPristine }">
 			</div>
-			<div class="row about-row" data-bind="css: { visible: showAbout }">
-				<p>Silk was made by Yuri Vishnevsky, with <a href="http://click.linksynergy.com/fs-bin/stat?id=1KYVs20MuZw&amp;offerid=146261&amp;type=3&amp;subid=0&amp;tmpid=1826&amp;RD_PARM1=https%253A%252F%252Fitunes.apple.com%252Fus%252Falbum%252Fthe-world-forgotten-single%252Fid579359664%253Fuo%253D4%2526partnerId%253D30">music</a> and sound crafted by <a href="http://microscopics.co.uk/">Mat Jarvis</a>.</p>
 
-				<p>Art shared with Silk is licensed under <a href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons</a>.</p>
-
-				<p>If you enjoyed Silk, please <a href="mailto:yurivish@gmail.com">let me know</a>!</p>
-
-			</div>
 		</div>
 
 		<canvas id="silk-1" class="silk-canvas active"></canvas>
